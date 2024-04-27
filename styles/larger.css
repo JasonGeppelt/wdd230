@@ -23,18 +23,18 @@
 
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Two columns with the first column wider */
-        column-gap: 20px; /* Space between columns */
+        grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+        grid-template-rows: auto 1fr; /* Creates two rows, the first size to content, the second taking up the remaining space */
+        gap: 20px; /* Adjust the gap as needed */
     }
 
-    .card {
-        /* No changes here, but could adjust padding or other styles if needed */
+    main > h1 {
+        grid-column: 1 / -1; /* Span the title across all columns */
     }
 
-    footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .learning-activities,
+    .information {
+        grid-column: span 1; /* Each card spans one column */
     }
 
     footer p {

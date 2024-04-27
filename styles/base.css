@@ -1,5 +1,7 @@
 /* Base styles that apply to all viewports */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
 /* Apply a basic reset */
 * {
     margin: 0;
@@ -8,8 +10,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif; /* Example font */
-    line-height: 1.6;
+    font-family: "Roboto Serif", serif;
     color: #333; /* Example text color */
     background-color: #fff; /* Background color of the body */
 }
@@ -28,13 +29,13 @@ header img {
 }
 
 header span {
-    font-size: 1.5em; /* Example size, adjust as needed */
-    font-weight: bold;
+    font-size: 3.5em; /* Example size, adjust as needed */
 }
 
 nav ul {
     list-style-type: none;
     padding: 20px 0;
+    font-size: 1.15em;
 }
 
 nav ul li a {
@@ -55,25 +56,41 @@ main {
     margin: 0 auto;
 }
 
+main h1 {
+    padding: 10px 0 10px 0;
+}
+
 .card {
-    background-color: #e7e7e7; /* Card background color */
+    background-color: #e7e7e7; /* background color */
     padding: 20px;
     margin-bottom: 20px;
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.414); /* Adds a subtle shadow */
 }
+
 
 footer {
     background-color: #1a1a1a; /* Footer background color */
     color: #f7f7f7; /* Footer text color */
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack flex items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
 }
 
 .card ul {
+    list-style-type: none;
     padding: 10px 0;
 }
 
 .card li {
     padding: 5px 0;
+}
+
+.card p {
+    padding: 10px 0;
 }
 
 .card a {
@@ -87,6 +104,15 @@ footer {
 }
 
 footer img {
-    width: 100px; /* Example width, adjust as needed */
+    width: 50px; /* Adjust the width as needed */
     height: auto;
+}
+
+footer p {
+    display: flex;
+    align-items: center; /* This ensures vertical centering */
+    gap: 10px; /* Add space between text and the flag */
+    margin-right: 10px; /* Optional spacing */
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
