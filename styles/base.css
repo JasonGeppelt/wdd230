@@ -1,0 +1,92 @@
+/* Base styles that apply to all viewports */
+
+/* Apply a basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Example font */
+    line-height: 1.6;
+    color: #333; /* Example text color */
+    background-color: #fff; /* Background color of the body */
+}
+
+header {
+    background-color: #1a1a1a; /* Header background color */
+    color: #f7f7f7; /* Header text color */
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    width: 100px; /* Example width, adjust as needed */
+    height: auto;
+    border-radius: 50%; /* Circular image */
+}
+
+header span {
+    font-size: 1.5em; /* Example size, adjust as needed */
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f7f7f7; /* Links color */
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+nav ul li a:hover {
+    background-color: #333; /* Hover effect */
+}
+
+main {
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #e7e7e7; /* Card background color */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #1a1a1a; /* Footer background color */
+    color: #f7f7f7; /* Footer text color */
+    padding: 20px;
+    text-align: center;
+}
+
+.card ul {
+    padding: 10px 0;
+}
+
+.card li {
+    padding: 5px 0;
+}
+
+.card a {
+    color: #0066cc; /* Links color */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.card a:hover {
+    color: #004499; /* Hover effect */
+}
+
+footer img {
+    width: 100px; /* Example width, adjust as needed */
+    height: auto;
+}

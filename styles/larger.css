@@ -1,0 +1,43 @@
+/* Styles for larger screens */
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+    }
+
+    header img {
+        margin-bottom: 0; /* Remove margin below image */
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 10px 20px; /* Larger padding */
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns with the first column wider */
+        column-gap: 20px; /* Space between columns */
+    }
+
+    .card {
+        /* No changes here, but could adjust padding or other styles if needed */
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer p {
+        margin: 0; /* Remove default margin from paragraphs */
+    }
+}
