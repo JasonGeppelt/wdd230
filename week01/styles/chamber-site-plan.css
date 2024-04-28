@@ -1,0 +1,86 @@
+/* Importing Google Fonts with the correct syntax and necessary weights */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@100;300;400;700;900&display=swap');
+
+/* CSS Hexadecimal Colors */
+:root {
+    --maroon: #500000; /* "Aggie Maroon" for local relevance */
+    --cream: #FFFFCC; /* Cream color for backgrounds and accents */
+    --night: #0C0C0C; /* Dark black/blue for high contrast text */
+    --onyx: #323A39; /* Dark greyish-green for decorative text */
+    --white: #FFFFFF; /* Pure white for backgrounds or text */
+}
+
+/* Base body styles */
+body {
+    background-color: var(--white);
+    color: var(--night);
+    font-family: 'Lato', Arial, sans-serif; /* Adding Arial as a fallback font */
+    font-size: 16px; /* Default font size */
+    line-height: 1.5; /* Line height for readability */
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Slightly smaller font size for mobile devices */
+    }
+}
+
+/* Headings styling using Montserrat for a stylish look */
+h1, h2, h3 {
+    color: var(--maroon);
+    font-family: 'Montserrat', 'Arial', sans-serif; /* Fallback to Arial */
+}
+
+/* Paragraphs and list items using Lato for readability */
+p, li {
+    font-family: 'Lato', 'Arial', sans-serif; /* Consistent body text font with fallback */
+}
+
+/* Elegant blockquotes using Merriweather */
+blockquote {
+    color: var(--onyx);
+    font-family: 'Merriweather', 'Times New Roman', serif; /* Fallback to Times New Roman */
+    margin: 20px 0; /* Adds vertical spacing for standalone emphasis */
+    padding-left: 20px; /* Indents text for clear differentiation */
+    border-left: 3px solid var(--maroon); /* Decorative line using theme color */
+}
+
+/* Utility classes for common tasks */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+/* Specific style for color swatch images */
+.color-swatch {
+    width: 50px;
+    height: 50px;
+}
+
+.scenarios-background {
+    background-color: var(--cream);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.35); /* Horizontal, vertical offsets, blur radius, and color */
+    border-radius: 15px;
+    padding: 2px;
+    padding-left: 20px;
+}
