@@ -25,23 +25,27 @@
     <meta property="og:image" content="https://jasongeppelt.github.io/wdd230/images/profile_pic.jpg">
     <meta property="og:url" content="https://jasongeppelt.github.io/wdd230">
     
-    <script src="scripts/getDates.js" defer></script>
+    <script src="scripts/index.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/profile_pic.jpg" alt="Profile picture">
-        <span>Jason Geppelt</span>
-        <nav>
+        <div class="top-header">
+            <img src="images/profile_pic.jpg" alt="Profile picture">
+            <span>Jason Geppelt</span>
+        </div>
+        <button id="menu"></button>
+        <nav class="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="chamber.htm">Chamber</a></li>
-                <li><a href="week01\chamber-site-plan.html">Site Plan</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
                 <li><a href="form.html">Form</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>WDD 230: Web Frontend Development</h1>
+        <button id="darkBtn">Dark Mode</button>
         <section class="card">
             <h2>Learning Activities</h2>
             <ul>
@@ -64,6 +68,5 @@
         <p>&copy; <span id="currentYear"></span> Jason Geppelt | Idaho, U.S.A. <img src="images/flag.jpg" alt="USA Flag"></p>
         <p>Last modification: <span id="lastModified"></span></p>
     </footer>
-<script src="scripts/getDates.js"></script>
 </body>
 </html>

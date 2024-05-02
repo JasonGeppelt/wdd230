@@ -12,6 +12,14 @@
         margin-bottom: 0; /* Remove margin below image */
     }
 
+    .top-header {
+        font-size: 1.7em;
+    }
+
+    #darkBtn {
+        top: 20px;
+    }
+
     nav ul {
         display: flex;
         justify-content: center;
@@ -39,5 +47,15 @@
 
     footer p {
         margin: 0; /* Remove default margin from paragraphs */
+    }
+
+    /* Additional CSS for hiding/showing navigation bar on larger screens */
+    .navigation {
+        display: flex;
+        justify-content: center;
+    }
+
+    #menu {
+        display: none;
     }
 }
