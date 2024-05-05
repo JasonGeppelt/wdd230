@@ -155,7 +155,7 @@ h2 {
 }
 
 .cta-button:hover {
-    background-color: darken(var(--primary-color), 10%); /* Slightly darken the color on hover */
+    background-color: #3f0000; /* Manually adjusted darker shade of maroon */
 }
 
 
