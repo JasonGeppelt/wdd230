@@ -1,0 +1,216 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+/* Root variables for color scheme */
+:root {
+    --primary-color: #500000; /* Aggie Maroon for primary elements */
+    --secondary-color: #323A39; /* Onyx for secondary text */
+    --background-color: #FFFFFF; /* White for background */
+    --text-color: #0C0C0C; /* Night color for primary text */
+    --link-color: #FFFFCC; /* Cream for links */
+    --footer-background: #323A39; /* Darker background for footer */
+    --footer-text: #FFFFFF; /* White text for footer */
+}
+
+/* Universal styles */
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--footer-text);
+    padding: 1rem;
+    text-align: center;
+}
+
+.top-header {
+    display: flex;       /* Enables flexbox layout */
+    align-items: center; /* Vertically aligns the items to the center */
+    justify-content: start; /* Aligns items to the start of the flex container */
+    padding: 1rem;      /* Add padding for some spacing around the items */
+}
+
+.header-image {
+    width: 100px;       /* Adjust width as necessary */
+    height: auto;       /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image round */
+    margin-right: 20px; /* Adds space between the image and the title */
+}
+
+.top-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;          /* Removes default margin */
+    color: var(--footer-text); /* Ensures text color is visible against the background */
+}
+
+
+#menu {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #ffffff;
+    display: inline-block;
+}
+
+#menu::before {
+    content: "☰";
+    display: block;
+}
+
+#menu.open::before {
+    content: "X"; /* "X" icon */
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.open {
+    display: block;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-top: 20px;
+    font-size: 1.15em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f7f7f7; /* Links color */
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+nav ul li a:hover {
+    background-color: #333; /* Hover effect */
+}
+
+.navigation ul {
+    padding: 0;
+    list-style: none;
+}
+
+.navigation li {
+    padding: 10px 0;
+}
+
+.navigation a {
+    font-weight: bold;
+    color: var(--footer-text);
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: var(--primary-color); /* Using the primary color variable */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: darken(var(--primary-color), 10%); /* Slightly darken the color on hover */
+}
+
+
+.card {
+    background-color: #e7e7e7; /* background color */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.414); /* Adds a subtle shadow */
+}
+
+
+footer {
+    background-color: #1a1a1a; /* Footer background color */
+    color: #f7f7f7; /* Footer text color */
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack flex items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.card li {
+    padding: 5px 0;
+}
+
+.card p {
+    padding: 10px 0;
+}
+
+.card a {
+    color: #0066cc; /* Links color */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.card a:hover {
+    color: #004499; /* Hover effect */
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.875rem;
+}
+
+address {
+    margin: 10px 0;
+}
