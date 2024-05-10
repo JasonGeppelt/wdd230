@@ -2,32 +2,57 @@ const input = document.querySelector('#favchap');
 const button = document.querySelector('button');
 const list = document.querySelector('#list');
 
-button.addEventListener('click', function() {
-    // Check if the input is not blank
-    if (input.value != '') {
-        // Create a li element
-        const li = document.createElement('li');
-        // Create a delete button
-        const deleteButton = document.createElement('button');
-        // Populate the li element's textContent with the input value
-        li.textContent = input.value;
-        // Set the delete button's textContent to '❌'
-        deleteButton.textContent = '❌';
-        // Append the delete button to the li element
-        li.append(deleteButton);
-        // Append the li element to the unordered list
-        list.append(li);
-        // Add an event listener to the delete button to remove the li when clicked
-        deleteButton.addEventListener('click', function() {
-            list.removeChild(li);
-            input.focus(); // Send the focus back to the input element
-        });
-        // Clean up the input field and set focus back to it
+// Function to retrieve chapters from local storage or set an empty array
+function getChapterList() {
+    const storedChapters = localStorage.getItem('myFavBOMList');
+    return storedChapters ? JSON.parse(storedChapters) : [];
+}
+
+// Declare and initialize chaptersArray
+let chaptersArray = getChapterList();
+
+// Display each chapter on page load
+chaptersArray.forEach(chapter => {
+    displayList(chapter);
+});
+
+// Function to display chapters
+function displayList(item) {
+    let li = document.createElement('li');
+    let deleteButton = document.createElement('button');
+    li.textContent = item;
+    deleteButton.textContent = '❌';
+    deleteButton.classList.add('delete');
+    li.appendChild(deleteButton);
+    list.appendChild(li);
+    deleteButton.addEventListener('click', function () {
+        list.removeChild(li);
+        deleteChapter(li.textContent);
+        input.focus();
+    });
+}
+
+// Event listener for adding chapters
+button.addEventListener('click', () => {
+    if (input.value.trim() !== '') {
+        displayList(input.value);
+        chaptersArray.push(input.value);
+        setChapterList();
         input.value = '';
         input.focus();
     } else {
-        // Optionally, alert the user if the input is empty
-        alert('Please enter a chapter name.'); // Or you might use another method to show the message
-        input.focus();
+        alert('Please enter a chapter name.');
     }
 });
+
+// Function to update local storage
+function setChapterList() {
+    localStorage.setItem('myFavBOMList', JSON.stringify(chaptersArray));
+}
+
+// Function to delete a chapter
+function deleteChapter(chapter) {
+    chapter = chapter.slice(0, -1);
+    chaptersArray = chaptersArray.filter(item => item !== chapter);
+    setChapterList();
+}
