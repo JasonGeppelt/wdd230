@@ -89,6 +89,33 @@ nav ul li a:hover {
     background-color: #333; /* Hover effect */
 }
 
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area without distorting the ratio */
+}
+
+
+.image-container {
+    grid-column: 1 / -1; /* Spans all columns from the first to the last */
+    position: relative;
+    width: 100%; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.overlay {
+    position: absolute;
+    top: 50px; /* Position from the bottom */
+    left: 50px; /* Position from the right */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    white-space: nowrap;
+    font-size: 1.25em;
+}
+
+
 main {
     padding: 20px;
     max-width: 90%;
@@ -168,6 +195,14 @@ footer {
 
 .card a:hover {
     color: #004499; /* Hover effect */
+}
+
+iframe {
+    grid-column: 1 / -1; /* Spans all columns from the first to the last */
+    position: relative;
+    width: 100%; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 footer img {

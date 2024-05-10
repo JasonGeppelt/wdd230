@@ -1,44 +1,22 @@
-// Utility to handle date and time information
-(function() {
-    const currentYearElement = document.getElementById('currentYear');
-    const lastModifiedElement = document.getElementById('lastModified');
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
 
-    if (currentYearElement) {
-        currentYearElement.textContent = new Date().getFullYear();
-    }
-
-    if (lastModifiedElement) {
-        lastModifiedElement.textContent = document.lastModified;
-    }
-})();
-
-// Navigation functionality
-(function() {
-    const hamButton = document.querySelector('#menu');
+    const menuButton = document.getElementById('menu');
     const navigation = document.querySelector('.navigation');
+    menuButton.addEventListener('click', () => {
+        menuButton.classList.toggle('open');
+        navigation.classList.toggle('open');
+    });
 
-    if (hamButton && navigation) {
-        hamButton.addEventListener('click', function() {
-            this.classList.toggle('open');  // Toggling 'open' on the button itself
-            navigation.classList.toggle('open');
-        });
-    } else {
-        console.error("Hamburger menu or navigation not found!");
-    }
-})();
+    const darkButton = document.getElementById('darkBtn');
+    const mainContent = document.querySelector('main');
+    darkButton.addEventListener('click', () => {
+        mainContent.classList.toggle('dark');
+    });
 
-// Dark mode toggle
-(function() {
-    const darkButton = document.querySelector('#darkBtn');
-    const main = document.querySelector('main'); // Select the main section
-
-    if (darkButton && main) {
-        darkButton.addEventListener('click', () => {
-            main.classList.toggle('dark');
-        });
-    } else {
-        console.error("Dark mode toggle or main section not found!");
-    }
-})();
-
-
+    let visits = localStorage.getItem('visitCount') || 0;
+    visits++;
+    localStorage.setItem('visitCount', visits);
+    document.getElementById('visitCount').textContent = visits;
+});

@@ -55,6 +55,10 @@
         justify-content: center;
     }
 
+    .overlay {
+        font-size: 3em;
+    }
+
     #menu {
         display: none;
     }
