@@ -22,7 +22,7 @@
     
     <script src="scripts/index.js" defer></script>
 </head>
-<body>
+<body class="discover-page">
     <header>
         <div class="top-header">
             <img src="images/header-image.webp" alt="Header image of College Station" class="header-image">
@@ -39,7 +39,63 @@
         </nav>
     </header>
     <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate suscipit molestias sapiente architecto nesciunt, hic libero error provident culpa aspernatur aliquid tempora, assumenda perspiciatis minus distinctio corrupti? Non, neque.</p>
+        <div class="sidebar">
+            <p class="card" id="visitMessage"></p>  <!-- This element will display the visit messages -->
+            <div class="card events">
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li>City Parade - June 12th</li>
+                    <li>Annual BBQ Fest - July 3rd</li>
+                    <li>Farmers Market Every Saturday</li>
+                </ul>
+            </div>
+            <div class="card attractions">
+                <h2>Local Attraction Spotlight</h2>
+                <p>Check out Albritton Bell Tower on the campus of Texas A&M University!</p>
+                <img src="images/tower-attraction.webp" alt="Image of Albritton Bell Tower at sunset" loading="lazy" width="500" height="300">
+            </div>
+            <div class="card calendar">
+                <h2>Calendar</h2>
+                <div id="simpleCalendar" class="calendar"></div>
+            </div>
+            <div class="card statistics">
+                <h2>Statistics</h2>
+                <ul>
+                    <li>Population: 250,000</li>
+                    <li>Annual Tourists: 1.2 Million</li>
+                    <li>Local Businesses: 4,000</li>
+                    <li>Average Annual Income: $45,000</li>
+                    <li>Annual Cultural Events: 25</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="main-content">
+            <figure>
+                <img src="images/campus-aerial.webp" alt="Aerial view of College Station showing sprawling buildings and green spaces" loading="lazy" width="640" height="320">
+                <figcaption>Aerial View of College Station, Texas</figcaption>
+            </figure>
+            <figure>
+                <img src="images/welcome-sign.webp" alt="Welcome sign at College Station with maroon and white decorations" loading="lazy" width="640" height="320">
+                <figcaption>Welcome to Our City!</figcaption>
+            </figure>
+            <figure>
+                <img src="images/downtown.webp" alt="Busy streets and modern storefronts in downtown College Station" loading="lazy" width="640" height="320">
+                <figcaption>Downtown College Station</figcaption>
+            </figure>
+            <figure>
+                <img src="images/aggie-ring.webp" alt="Close-up view of the Aggie Ring, a symbol of Texas A&M University pride" loading="lazy" width="640" height="320">
+                <figcaption>The Aggie Ring</figcaption>
+            </figure>
+            <figure>
+                <img src="images/library.webp" alt="Exterior view of the George Bush Library, featuring classic architecture" loading="lazy" width="640" height="320">
+                <figcaption>George Bush Library</figcaption>
+            </figure>
+            <figure>
+                <img src="images/outdoor-movie.webp" alt="Community members gathering for an outdoor movie night on a large grass field" loading="lazy" width="640" height="320">
+                <figcaption>Outdoor Movie Night</figcaption>
+            </figure>                     
+        </div>
     </main>
     <footer>
         <address>

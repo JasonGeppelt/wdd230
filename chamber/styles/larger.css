@@ -1,15 +1,14 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1006px) {
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 10%;
+        padding: 20px calc(5% + 20px); /* Responsive padding based on screen width */
     }
 
     nav ul {
-        display: flex;
+        flex-direction: row;
         justify-content: center;
-        margin-top: 0;
     }
 
     nav ul li a {
@@ -28,5 +27,20 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+
+    .discover-page main {
+        display: grid;
+        grid-template-columns: 1fr 1.75fr;
+        gap: 20px;
+    }
+    
+    .discover-page .main-content img {
+        width: 100%;
+        transition: transform 0.5s ease;
+    }
+    
+    .discover-page .main-content img:hover {
+        transform: scale(1.02);
     }
 }

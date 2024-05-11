@@ -92,20 +92,23 @@ header {
 
 nav ul {
     list-style-type: none;
-    padding-top: 20px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     font-size: 1.15em;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #f7f7f7; /* Links color */
+    color: var(--footer-text);
     display: block;
     padding: 10px;
     transition: background-color 0.3s; /* Smooth background transition */
 }
 
 nav ul li a:hover {
-    background-color: #333; /* Hover effect */
+    background-color: var(--secondary-color);
 }
 
 .navigation ul {
@@ -124,7 +127,11 @@ nav ul li a:hover {
 
 /* Main content styles */
 main {
-    padding: 20px;
+    width: calc(100% - 40px); /* Adjust width to allow for padding on both sides */
+    max-width: 1500px; /* Maximum width for the main content area */
+    margin: 0 auto; /* Centers the main content block horizontally */
+    padding: 20px; /* Adds padding around the content */
+    box-sizing: border-box; /* Includes padding in the width calculation */
     line-height: 1.6;
 }
 
@@ -158,16 +165,6 @@ h2 {
     background-color: #2a0000; /* Manually adjusted darker shade of maroon */
 }
 
-
-.card {
-    background-color: #e7e7e7; /* background color */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px; /* Rounds the corners */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.414); /* Adds a subtle shadow */
-}
-
-
 footer {
     background-color: #1a1a1a; /* Footer background color */
     color: #f7f7f7; /* Footer text color */
@@ -177,6 +174,18 @@ footer {
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
     text-align: center; /* Center text */
+}
+
+.card {
+    background-color: #e7e7e7; /* background color */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.414); /* Adds a subtle shadow */
+}
+
+.card h2 {
+    margin-top: 0;  /* Removes the top margin from the <h2> elements */
 }
 
 .card ul {
@@ -214,3 +223,64 @@ footer {
 address {
     margin: 10px 0;
 }
+
+.discover-page main {
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-page .main-content img {
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.discover-page .sidebar,
+.discover-page .main-content {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.sidebar .card, .main-content figure {
+    margin-bottom: 35px;
+}
+
+figcaption {
+    font-size: 1.25em;
+}
+
+.discover-page #visitMessage {
+    text-align: center; /* Center the text horizontally */
+    font-size: 1.2em; /* Make the font size larger than the normal text */
+    color: var(--primary-color); /* Use a distinctive text color, matches your primary color if applicable */
+    padding: 15px; /* Add padding around the text for better spacing */
+    background-color: var(--link-color); /* Optional: a light background color for the message */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.discover-page #visitMessage {
+    animation: fadeIn 2s ease-out;
+}
+
+
+.discover-page #simpleCalendar table {
+    max-width: 500px;
+    border-collapse: collapse; 
+    table-layout: fixed; 
+}
+
+.discover-page #simpleCalendar th, .discover-page #simpleCalendar td {
+    border: 1px solid #ccc; 
+    padding: 8px; /* Padding inside cells */
+    text-align: center; 
+    width: 14.28%; /* Divides the width equally into 7 parts for 7 days */
+}
+
+.discover-page #simpleCalendar th {
+    background-color: #eee; 
+}
+
+
