@@ -38,8 +38,88 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate suscipit molestias sapiente architecto nesciunt, hic libero error provident culpa aspernatur aliquid tempora, assumenda perspiciatis minus distinctio corrupti? Non, neque.</p>
+    <main class="join-page">
+        <h1>Join the Chamber of Commerce</h1>
+        <form method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                
+                <label for="title">Title/Position:</label>
+                <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}" title="Title must be at least 7 characters long and contain only letters, hyphens, and spaces.">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                
+                <label for="phone">Mobile Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="organization">Organization:</label>
+                <input type="text" id="organization" name="organization" required>
+                
+                <label for="membershipLevel">Membership Level:</label>
+                <select id="membershipLevel" name="membershipLevel" required>
+                    <option value="np">NP Membership (Non-Profit, No Fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+                
+                <label for="description">Organization Description:</label>
+                <textarea id="description" name="description"></textarea>
+                
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+                
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+        <div class="membership-benefits">
+            <h2>Membership Benefits</h2>
+            <div class="benefit-level">
+                <h3>NP Membership</h3>
+                <p>Our NP Membership is designed for non-profit organizations. This membership comes at no cost and includes the following benefits:</p>
+                <ul>
+                    <li>Access to networking events</li>
+                    <li>Basic listing in our directory</li>
+                    <li>Participation in community outreach programs</li>
+                </ul>
+            </div>
+            <div class="benefit-level">
+                <h3>Bronze Membership</h3>
+                <p>The Bronze Membership includes all NP benefits, plus:</p>
+                <ul>
+                    <li>Enhanced directory listing</li>
+                    <li>Access to member-exclusive webinars and workshops</li>
+                    <li>Discounts on event tickets</li>
+                </ul>
+            </div>
+            <div class="benefit-level">
+                <h3>Silver Membership</h3>
+                <p>The Silver Membership includes all Bronze benefits, plus:</p>
+                <ul>
+                    <li>Priority placement in our directory</li>
+                    <li>Free admission to select events</li>
+                    <li>Advertising opportunities in our newsletter</li>
+                    <li>Participation in member spotlight features</li>
+                </ul>
+            </div>
+            <div class="benefit-level">
+                <h3>Gold Membership</h3>
+                <p>The Gold Membership is our premium offering, including all Silver benefits, plus:</p>
+                <ul>
+                    <li>Premium directory listing with logo and detailed description</li>
+                    <li>Unlimited free event admissions</li>
+                    <li>Top priority advertising in all chamber publications</li>
+                    <li>Exclusive networking opportunities with top industry leaders</li>
+                    <li>Personalized support from our membership team</li>
+                </ul>
+            </div>
+        </div>
+        
     </main>
     <footer>
         <address>
