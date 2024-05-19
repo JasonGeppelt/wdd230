@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Geppelt - WDD 230 - Web Frontend Development</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal by Jason Geppelt.">
+    <meta name="author" content="Jason Geppelt">
+    <meta property="og:title" content="Jason Geppelt - WDD 230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jasongeppelt.github.io/wdd230/images/profile_pic.webp">
+    <meta property="og:url" content="https://jasongeppelt.github.io/wdd230">
+
+    <script src="scripts/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <img src="images/profile_pic.webp" alt="Profile picture of Jason Geppelt">
+            <span>Jason Geppelt</span>
+        </div>
+        <button id="menu" aria-label="Menu"></button>
+        <nav class="navigation" aria-label="Primary">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+                <li><a href="form.html">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Submit Your Information</h1>
+        <form method="get" action="record.html">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]{8,}" title="Password must be at least 8 characters long and contain only letters and numbers" required>
+                
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid BYUI email address" required>
+                
+                <label for="rating">Page Rating:</label>
+                <input type="range" id="rating" name="rating" min="1" max="10" step="1" oninput="document.getElementById('ratingValue').innerText = this.value">
+                <span id="ratingValue">5</span>
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Jason Geppelt | Idaho, U.S.A. <img src="images/flag.webp" alt="USA Flag"></p>
+        <p>Last modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

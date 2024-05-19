@@ -62,4 +62,39 @@
     #menu {
         display: none;
     }
+
+    /* Form styles for larger screens */
+    form {
+        grid-column: 1 / -1; /* Span the form across all columns */
+        padding: 2rem; /* Increased padding for form */
+    }
+
+    fieldset {
+        padding: 2rem; /* Increased padding for fieldsets */
+    }
+
+    label {
+        font-size: 1.1em; /* Larger font size for labels */
+        margin-bottom: 1rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="url"],
+    input[type="date"],
+    input[type="number"],
+    input[type="range"],
+    select {
+        font-size: 1em; /* Larger font size for input elements */
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    input[type="submit"] {
+        padding: 1rem 2rem; /* Larger padding for submit button */
+        font-size: 1.2em; /* Larger font size for submit button */
+    }
 }
