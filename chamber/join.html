@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     
-    <meta name="description" content="Chamber of Commerce website, a course assignment by Jason Geppelt for WDD 230.">
+    <meta name="description" content="Chamber of Commerce website join page, a course assignment by Jason Geppelt for WDD 230.">
     <meta name="author" content="Jason Geppelt">
     <meta name="robots" content="index, follow">
     
@@ -40,43 +40,46 @@
     </header>
     <main class="join-page">
         <h1>Join the Chamber of Commerce</h1>
-        <form method="get" action="thankyou.html">
-            <fieldset>
-                <legend>Personal Information</legend>
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
-                
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
-                
-                <label for="title">Title/Position:</label>
-                <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}" title="Title must be at least 7 characters long and contain only letters, hyphens, and spaces.">
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
-                
-                <label for="phone">Mobile Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-                
-                <label for="organization">Organization:</label>
-                <input type="text" id="organization" name="organization" required>
-                
-                <label for="membershipLevel">Membership Level:</label>
-                <select id="membershipLevel" name="membershipLevel" required>
-                    <option value="np">NP Membership (Non-Profit, No Fee)</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
-                
-                <label for="description">Organization Description:</label>
-                <textarea id="description" name="description"></textarea>
-                
-                <input type="hidden" id="timestamp" name="timestamp" value="">
-                
-                <input type="submit" value="Submit">
-            </fieldset>
-        </form>
+        <div class="form-container">
+            <form method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    
+                    <label for="title">Title/Position:</label>
+                    <input type="text" id="title" name="title" pattern="[A-Za-z\s-]{7,}" title="Title must be at least 7 characters long and contain only letters, hyphens, and spaces.">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                    
+                    <label for="phone">Mobile Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="organization">Organization:</label>
+                    <input type="text" id="organization" name="organization" required>
+                    
+                    <label for="membershipLevel">Membership Level:</label>
+                    <select id="membershipLevel" name="membershipLevel" required>
+                        <option value="">Select a membership level</option>
+                        <option value="np">NP Membership (Non-Profit, No Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                    
+                    <label for="description">Organization Description:</label>
+                    <textarea id="description" name="description"></textarea>
+                    
+                    <input type="hidden" id="timestamp" name="timestamp" value="">
+                    
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
         <div class="membership-benefits">
             <h2>Membership Benefits</h2>
             <div class="benefit-level">
@@ -119,7 +122,6 @@
                 </ul>
             </div>
         </div>
-        
     </main>
     <footer>
         <address>
