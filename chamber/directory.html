@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     
-    <meta name="description" content="Chamber of Commerce website, a course assignment by Jason Geppelt for WDD 230.">
+    <meta name="description" content="The Directory of the College Station Chamber of Commerce, a course assignment by Jason Geppelt for WDD 230.">
     <meta name="author" content="Jason Geppelt">
     <meta name="robots" content="index, follow">
     
@@ -39,7 +39,13 @@
         </nav>
     </header>
     <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate suscipit molestias sapiente architecto nesciunt, hic libero error provident culpa aspernatur aliquid tempora, assumenda perspiciatis minus distinctio corrupti? Non, neque.</p>
+        <div class="view-toggle">
+            <button id="gridView" onclick="toggleView('grid')">Grid View</button>
+            <button id="listView" onclick="toggleView('list')">List View</button>
+        </div>
+        <div id="directoryContainer" class="grid-view">
+            <!-- Member cards will be inserted here -->
+        </div>
     </main>
     <footer>
         <address>

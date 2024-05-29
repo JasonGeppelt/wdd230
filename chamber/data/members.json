@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Sunrise Solutions",
+        "address": "123 Main St, College Station, TX 77845",
+        "phone": "979-555-1111",
+        "website": "https://sunrisesolutions.com",
+        "image": "https://picsum.photos/50",
+        "membershipLevel": "Gold",
+        "description": "A leading company in industry."
+    },
+    {
+        "name": "BlueSky Technologies",
+        "address": "456 Elm St, College Station, TX 77845",
+        "phone": "979-555-2222",
+        "website": "https://blueskytechnologies.com",
+        "image": "https://picsum.photos/50",
+        "membershipLevel": "Silver",
+        "description": "Innovative solutions for your needs."
+    },
+    {
+        "name": "GreenLeaf Services",
+        "address": "789 Oak St, College Station, TX 77845",
+        "phone": "979-555-3333",
+        "website": "https://greenleafservices.com",
+        "image": "https://picsum.photos/50",
+        "membershipLevel": "Bronze",
+        "description": "Quality services at affordable prices."
+    },
+    {
+        "name": "RedBrick Enterprises",
+        "address": "321 Pine St, College Station, TX 77845",
+        "phone": "979-555-4444",
+        "website": "https://redbrickenterprises.com",
+        "image": "https://picsum.photos/50",
+        "membershipLevel": "Gold",
+        "description": "Excellence in every aspect."
+    },
+    {
+        "name": "SilverLine Consulting",
+        "address": "654 Maple St, College Station, TX 77845",
+        "phone": "979-555-5555",
+        "website": "https://silverlineconsulting.com",
+        "image": "https://picsum.photos/50",
+        "membershipLevel": "Silver",
+        "description": "Dedicated to your success."
+    },
+    {
+        "name": "GoldenGate Software",
+        "address": "987 Birch St, College Station, TX 77845",
+        "phone": "979-555-6666",
+        "website": "https://goldengatesoftware.com",
+        "image": "https://picsum.photos/50",
+        "membershipLevel": "Bronze",
+        "description": "Quality you can trust."
+    },
+    {
+        "name": "WhiteWave Industries",
+        "address": "159 Cedar St, College Station, TX 77845",
+        "phone": "979-555-7777",
+        "website": "https://whitewaveindustries.com",
+        "image": "https://picsum.photos/50",
+        "membershipLevel": "Gold",
+        "description": "Your partner in growth."
+    }
+]

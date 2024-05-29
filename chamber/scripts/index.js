@@ -97,3 +97,43 @@ if (window.location.pathname.endsWith('discover.html')) {
         });
     })();
 }
+
+// Fetch and display members for directory.html
+if (window.location.pathname.endsWith('directory.html')) {
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('data/members.json')
+            .then(response => response.json())
+            .then(data => displayMembers(data));
+    });
+
+    function displayMembers(members) {
+        const container = document.getElementById('directoryContainer');
+        container.innerHTML = ''; // Clear existing content
+
+        members.forEach(member => {
+            const memberDiv = document.createElement('div');
+            memberDiv.className = 'member-card';
+            memberDiv.innerHTML = `
+                <img src="images/${member.image}" alt="${member.name} logo">
+                <h2>${member.name}</h2>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <a href="${member.website}" target="_blank">${member.website}</a>
+                <p>${member.membershipLevel} Member</p>
+                <p>${member.description}</p>
+            `;
+            container.appendChild(memberDiv);
+        });
+    }
+
+    function toggleView(view) {
+        const container = document.getElementById('directoryContainer');
+        if (view === 'grid') {
+            container.classList.remove('list-view');
+            container.classList.add('grid-view');
+        } else {
+            container.classList.remove('grid-view');
+            container.classList.add('list-view');
+        }
+    }
+}

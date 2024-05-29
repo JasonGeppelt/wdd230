@@ -327,3 +327,50 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #2a0000; /* Darker shade of primary color */
 }
+
+/* Styles for the directory */
+#directoryContainer.grid-view .member-card {
+    display: inline-block;
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+#directoryContainer.list-view .member-card {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Additional styles for member cards */
+.member-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.member-card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.member-card p,
+.member-card a {
+    margin: 5px 0;
+}
+
+/* Styles for the view toggle buttons */
+.view-toggle {
+    margin-bottom: 20px;
+}
+
+.view-toggle button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
