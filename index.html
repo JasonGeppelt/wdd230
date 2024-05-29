@@ -19,6 +19,8 @@
     <meta property="og:url" content="https://jasongeppelt.github.io/wdd230">
 
     <script src="scripts/index.js" defer></script>
+    <script src="scripts/links.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 </head>
 <body>
     <header>
@@ -50,21 +52,18 @@
         <section class="card learning-activities">
             <h2>Learning Activities</h2>
             <ul>
-                <li>Week 01: <a href="week01/holygrail.html">Layout</a> | <a href="week01/media-query.html">Media Query</a></li>
-                <li>Week 02: <a href="week02/design.html">Design</a> | <a href="https://codepen.io/Jason-Geppelt/pen/KKYjMbP">Hamburger</a> | <a href="week02/bom.html">Top 10</a></li>
-                <li>Week 03: <a href="week03/images/landscape.webp">WebP</a> | <a href="week03/lazyload.html">Lazy Load</a> | <a href="week03/responsive-images.html">Responsive Images</a> | <a href="week03/bom.html">Storage</a></li>
-                <li>Week 04: <a href="https://codepen.io/Jason-Geppelt/pen/QWRymwP">Pseudo Fun</a> | <a href="week04/images/Screenshot 2024-05-18 232111.png">Combinators</a> | <a href="week04/tablebuild.html">Table</a> | <a href="week04/Form-start/index.html">Forms</a></li>
-                <li>Week 05:</li>
-                <li>Week 06:</li>
+                <!-- Dynamic links will be inserted here by links.js -->
             </ul>
         </section>
         <section class="card information">
             <h2>Information</h2>
             <p>Location: Toloria, Madagascar</p>
-            <p>Weather: 76°F - Sunshine</p>
+            <p id="weather">Weather: <span id="temperature"></span> - <span id="description"></span></p>
+            <img id="weather-icon" alt="Weather icon">
             <div id="visitCounter">Number of visits: <span id="visitCount">0</span></div>
         </section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92618.64340815965!2d-112.03615154999999!3d43.49539655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5354594e739512b5%3A0x2311c9fc094c49c9!2sIdaho%20Falls%2C%20ID!5e0!3m2!1sen!2sus!4v1715313883837!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </main>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92618.64340815965!2d-112.03615154999999!3d43.49539655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5354594e739512b5%3A0x2311c9fc094c49c9!2sIdaho%20Falls%2C%20ID!5e0!3m2!1sen!2sus!4v1715313883837!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </main>
     <footer>
         <p>&copy; <span id="currentYear"></span> Jason Geppelt | Idaho, U.S.A. <img src="images/flag.webp" alt="USA Flag"></p>
         <p>Last modification: <span id="lastModified"></span></p>
